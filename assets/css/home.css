@@ -28,7 +28,7 @@ body.home {
   inset: -12%;
   z-index: 0;
   background-color: #0b1020;
-  background-image: url("../img/nebula.jpg");
+  background-image: url("/assets/img/nebula.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
