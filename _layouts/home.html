@@ -3,12 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 </head>
 <body class="home">
-  <header class="home-name">{{ page.title | default: site.title }}</header>
-
   <nav class="marks" aria-label="Places">
     <a class="mark" href="{{ page.x_url }}" aria-label="X">
       <svg viewBox="0 0 24 24" aria-hidden="true">
