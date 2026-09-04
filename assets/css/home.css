@@ -83,8 +83,8 @@ body.home {
 
 .plaque {
   position: fixed;
-  right: 1.35rem;
-  bottom: 1.1rem;
+  right: 3.25rem;
+  bottom: 2.85rem;
   z-index: 1;
   margin: 0;
   color: #000;
@@ -93,6 +93,7 @@ body.home {
   font-weight: 500;
   letter-spacing: 0.16em;
   line-height: 1;
+  text-shadow: 0 0 1px rgba(244, 246, 248, 0.35);
 }
 
 @media (max-width: 40rem) {
@@ -103,8 +104,8 @@ body.home {
   }
   .mark { width: 2.4rem; height: 2.4rem; }
   .plaque {
-    right: 1rem;
-    bottom: 0.9rem;
+    right: 1.75rem;
+    bottom: 1.65rem;
     font-size: 0.6rem;
     letter-spacing: 0.14em;
   }
