@@ -1,0 +1,38 @@
+/* Stub — type, size, and spacing live here */
+
+:root {
+  --text: #1a1a1a;
+  --bg: #fff;
+  --measure: 40rem;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+main {
+  max-width: var(--measure);
+  margin: 2.5rem auto;
+  padding: 0 1.25rem;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+a { color: inherit; }

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Victor Erwin
 updated: 2026-09-04
 ---

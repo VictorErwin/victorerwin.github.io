@@ -1,1 +1,9 @@
+title: Victor Erwin
+url: https://victorerwin.github.io
+markdown: kramdown
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
