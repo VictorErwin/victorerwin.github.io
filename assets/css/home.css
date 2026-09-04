@@ -1,8 +1,9 @@
 /* Home door only. Wiki type lives in site.css. */
 
 :root {
-  --gulf: #b7d4de;
-  --ink: #163247;
+  --ink: #f4f6f8;
+  --panel: rgba(8, 10, 16, 0.62);
+  --panel-edge: rgba(255, 255, 255, 0.12);
 }
 
 * { box-sizing: border-box; }
@@ -17,15 +18,44 @@ body.home {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gulf);
+  background: #0b1020;
   color: var(--ink);
+  overflow: hidden;
+}
+
+.field {
+  position: fixed;
+  inset: -12%;
+  z-index: 0;
+  background-color: #0b1020;
+  background-image: url("../img/nebula.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.08);
+  animation: drift 55s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes drift {
+  from { transform: scale(1.08) translate3d(-1.6%, -0.8%, 0); }
+  to   { transform: scale(1.16) translate3d(1.6%, 0.8%, 0); }
 }
 
 .marks {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2.75rem;
+  padding: 1.35rem 2.1rem;
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: 1.35rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
 .mark {
@@ -33,7 +63,7 @@ body.home {
   width: 2.75rem;
   height: 2.75rem;
   color: var(--ink);
-  opacity: 0.88;
+  opacity: 0.92;
   transform: translateY(0);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -52,6 +82,25 @@ body.home {
 }
 
 @media (max-width: 40rem) {
-  .marks { gap: 2rem; }
+  .marks {
+    gap: 2rem;
+    padding: 1.15rem 1.55rem;
+    border-radius: 1.15rem;
+  }
   .mark { width: 2.4rem; height: 2.4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field {
+    animation: none;
+    transform: none;
+    inset: 0;
+  }
+  .mark {
+    transition: none;
+  }
+  .mark:hover,
+  .mark:focus-visible {
+    transform: none;
+  }
 }
